@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app-develop
+  namespace: python-app-develop
+  labels:
+    app: python-app-develop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-app-develop
+  template:
+    metadata:
+      labels:
+        app: python-app-develop
+    spec:
+      containers:
+        - name: python-container
+          image: guptatrng/python-app-develop:5af5bacc3e771b90d393db09a542bf9d4c5caeed
+          ports:
+            - containerPort: 5000
+      resource:
