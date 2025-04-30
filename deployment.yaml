@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: python-container
-          image: guptatrng/python-app-develop:84e9aea82415a6ae9cc12f0e27f4e477129e5105
+          image: guptatrng/python-app-develop:c3f461f6164e29150d6ae2c951a5b4d3829e8bed
           ports:
             - containerPort: 5000
       resource:
